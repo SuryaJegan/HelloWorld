@@ -1,0 +1,253 @@
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;"><b>Status:
+	</b><span
+		style='font-family: Calibri; font-size: 14px; color: @(status_color);'>@(overall_status)</span>
+	</td>
+</tr>
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">Total
+		Size of the Training Set: <span
+		style='font-family: Calibri; font-size: 14px; color: @(training_color);'>@(training_set_count)</span>
+	</td>
+</tr>
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">Total
+		Size of the Prediction Set: <span
+		style='font-family: Calibri; font-size: 14px;'>@(test_set_count)</span>
+	</td>
+</tr>
+
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">In
+		Training Set- Number of ISP Vs NON-ISPs</td>
+</tr>
+
+<tr style="padding-top: 8px;">
+	<table border="0" cellpadding="0" cellspacing="0"
+		style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; width: auto; padding-top: 8px;">
+
+		<tbody>
+			<tr>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>ISP
+					</span></b>
+				</td>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>NON-ISP
+					</span></b>
+				</td>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>Ratio
+							ISP Over Non-ISP </span></b>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(training_isp)</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(training_non_isp)</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(isp_color);'>@(isp_ratio)%</td>
+			</tr>
+		</tbody>
+	</table>
+</tr>
+
+
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">Confusion
+		matrix for Test Set:</td>
+</tr>
+
+<tr style="padding-top: 8px;">
+	<table border="0" cellpadding="0" cellspacing="0"
+		style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; width: auto; padding-top: 8px;">
+		<tbody>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; background: #66ccff;'>
+					<b><span  style='font-family: Calibri;color: white; font-size: 14px;'>Column
+				</span></b>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; background: #66ccff; font-family: Calibri;'>
+					<b><span style='font-family: Calibri;  color: white;font-size: 14px;'>Value</span></b></td>
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>TP_1 </span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(tp)</td>
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>FP </span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(fp)</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>TN_0 </span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(tn)</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>FN</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(fn)</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>Correct
+				</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(correct)</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>Wrong</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(wrong)</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>Percent
+						Ratio (WRONG*100/CORRECT)</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(percent_color);'>@(percent)%</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>Recall_Sensitivitiy
+						(TP*100/(TP+FN)</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(recall_color);'>@(recall)%</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 210.55pt; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<span style='font-family: Calibri; font-size: 14px;'>False_Omission_Rate_FOR
+						(FN*100/(FN+TN))</span>
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(for_color);'>@(for)%</td>
+
+			</tr>
+
+
+
+		</tbody>
+	</table>
+</tr>
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">In
+		Predicted Set&#8208; Total Number of Predicted ISPs and Non-ISPs:</td>
+</tr>
+
+<tr style="padding-top: 8px;">
+	<table border="0" cellpadding="0" cellspacing="0"
+		style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; width: auto;">
+		<tbody>
+			<tr>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>ISP
+					</span></b>
+				</td>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>NON-ISP
+					</span></b>
+				</td>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>Ratio
+							ISP Over Non-ISP </span></b>
+				</td>
+			</tr>
+			<tr>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(predicted_isp_ratio);'>@(isp)</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(predicted_isp_ratio);'>@(nonisp)</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(predicted_isp_ratio);'>@(predictedRatio)%
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</tr>
+
+
+<tr>
+	<td style="padding-top: 8px; font-family: Calibri; font-size: 14px;">Total
+		Count of ISP and Non-ISP in Top 200 records based on ip_duns and
+		visits</td>
+</tr>
+
+<tr style="padding-top: 8px;">
+	<table border="0" cellpadding="0" cellspacing="0"
+		style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; width: auto; padding-left: 10px;">
+		<tbody>
+			<tr>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>Predicted
+							Isp </span></b>
+				</td>
+				<td
+					style='width: 115.55pt; border: solid windowtext 1.0pt; background: #66ccff; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt'>
+					<b><span
+						style='color: white; font-family: Calibri; font-size: 14px;'>Predicted
+							Non Isp </span></b>
+				</td>
+
+			</tr>
+			<tr>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri;'>@(predictedisp)
+				</td>
+				<td
+					style='width: 115.55pt; font-size: 14px; border: solid windowtext 1.0pt; padding: 0in 5.4pt 0in 5.4pt; height: 15.0pt; font-family: Calibri; color: @(predicted_nonisp_color);'>@(predictednonisp)
+				</td>
+
+			</tr>
+			<tr>
+				<td
+					style="padding-top: 20px; font-family: Calibri; font-size: 14px; font-weight: normal; margin: 0;">Thank
+					you.</td>
+			</tr>
